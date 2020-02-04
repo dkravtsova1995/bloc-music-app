@@ -1,0 +1,461 @@
+@import url('https://fonts.googleapis.com/css?family=Allerta+Stencil|Bad+Script');
+@import url('https://fonts.googleapis.com/css?family=Palanquin');
+
+/*App.js, front page*/
+
+.banner{
+  background: url("/assets/background/audio-cassette-cassette-tape-1626481.jpg");
+  width: 100%;
+  background-size: cover;
+}
+
+.top-bar{
+  font-family: 'Allerta Stencil';
+  background-color: #000;
+  display: flex;
+  width:100%;
+  height: auto;
+}
+
+.logo{
+  color:white;
+  flex:1;
+  font-size:40px;
+  padding: 20px;
+  text-transform: uppercase;
+}
+
+.logo a{
+  color: white;
+  text-decoration: none;
+}
+
+.menu{
+  flex:3;
+}
+
+.menu ul{
+  display:flex;
+  list-style: none;
+  margin-top: 30px;
+  margin-left: 80%;
+  flex-flow: row wrap;
+}
+
+.menu ul li{
+  flex:1;
+  text-align: center;
+}
+
+.menu ul li a{
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.banner{
+  display: flex;
+  padding: 20% 0;
+  color: red;
+}
+
+.banner-text{
+  font-family: 'Palanquin', sans-serif;
+  color: #fff;
+  margin:auto;
+  text-align: center;
+  width: 50%;
+}
+
+.banner-text h1{
+  font-size: 4em;
+  text-shadow: 2px 2px grey;
+  text-transform: uppercase;
+  margin:auto;
+}
+
+.main-content{
+  width: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.point{
+  margin: 20px;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+}
+
+
+.icon {
+  font-size: 6rem;
+  color: #000;
+}
+
+@media screen and (max-width: 800px) { /* Mobile */
+  .banner {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-title {
+    font-size: 240%;
+  }
+
+  .point {
+    flex-flow: column;
+    min-width: 300px;
+    padding: 5rem 0 0 0;
+  }
+}
+
+
+
+/* Library*/
+
+
+.library {
+  width: 85%;
+  padding: 0 1rem;
+  margin: auto;
+}
+
+.album-link {
+  position: relative;
+  color: #000;
+  display: inline-block;
+  margin: 2.5rem;
+  padding: 0.1rem;
+  width: fit-content;
+  text-align: center;
+  top: 0;
+  transition: top ease 0.2s;
+}
+
+.album-link:hover {
+  top: -10px;
+  transition: 0.2s;
+}
+
+.album-link img {
+  width: 20rem;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.album-name {
+  font-weight: bolder;
+  font-size: 115%;
+  margin: auto;
+  width: fit-content;
+}
+
+.album-artist {
+  color: #000;
+  margin: auto;
+  width: fit-content;
+}
+
+@media screen and (max-width: 440px) { /* Mobile */
+  .library {
+    max-width: 100%;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .album-link {
+    padding: 0;
+    margin: 0.5rem auto;
+  }
+
+  .album-link img {
+    width: 100vw;
+  }
+}
+
+/* Album */
+
+button {
+  background: transparent;
+  color: #000;
+  border: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+.album {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.album-info {
+  width: 25%;
+}
+
+.album-details {
+  color: #000;
+  text-align: center;
+}
+
+.invisible {
+  display: none;
+}
+
+.song {
+  line-height: 3rem;
+  cursor: pointer;
+}
+
+.song .ion-play {
+  display: none;
+}
+
+.song .ion-pause {
+  vertical-align: -0.2rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.song:hover {
+  background: #e3e3e3;
+}
+
+.song:hover .song-number {
+  display: none;
+}
+
+.song:hover .ion-play {
+  vertical-align: -0.2rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: inline;
+}
+
+.song-actions {
+  width: 3rem;
+  cursor: pointer;
+}
+
+.song-duration {
+  width: 3rem;
+}
+
+.song-list-container {
+  display: inline-block;
+  width: 65%;
+  margin: auto;
+  padding: 5rem;
+  vertical-align: top;
+}
+
+.artist,
+#release-info {
+  color: #000;
+  font-weight: 400;
+  margin: 0.5rem;
+}
+
+#album-info {
+  display: inline-block;
+  width: fit-content;
+  padding: 5rem 5rem 0 5rem;
+}
+
+#album-cover-art {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+#album-title {
+  font-weight: bolder;
+  font-size: 2rem;
+  margin: 0.5rem;
+}
+
+#song-list {
+  color: #000;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+
+/* Player Bar */
+
+input[type=range] {
+  -webkit-appearance: none;
+  display: inline-block;
+  background: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  display: hidden;
+  height: 1rem;
+  width: 1rem;
+  margin-top: -0.34rem;
+  border: none;
+  border-radius: 100%;
+  background: #fff;
+  cursor: pointer;
+  transition: ease 0.1s;
+}
+
+input[type=range]:hover::-webkit-slider-thumb {
+  height: 1.2rem;
+  width: 1.2rem;
+  margin-top: -0.46rem;
+  color: #f50057;
+  transition: 0.1s;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 0.3rem;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color:transparent;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  border-radius: 1rem;
+  cursor: pointer;
+  height: 0.3rem;
+  background: #fff;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+.player-bar {
+  color: white;
+  background: #000;
+  position: fixed;
+  text-align: center;
+  left: 0;
+  bottom: 0;
+  height: 8rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.player-bar-controls {
+  padding: 1rem;
+}
+
+.play-icon {
+  color: #fff;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.player-icon {
+  color: #fff;
+  font-size: 2rem;
+  margin: 0 5rem;
+  cursor: pointer;
+}
+
+.seek-bar {
+  width: 50vw;
+  vertical-align: 0.15rem;
+}
+
+.current-time {
+  display: inline-block;
+  padding-right: 0.5rem;
+}
+
+.time-left {
+  display: inline-block;
+  padding-left: 0.5rem;
+}
+
+.volume-bar {
+  vertical-align: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.volume-icon {
+  display: inline-block;
+  padding-right: 0.5rem;
+  font-size: 1.6rem;
+}
+
+#time-control {
+  display: inline-block;
+  width: fit-content;
+  margin: 0;
+  padding: 0;
+}
+
+#volume-control {
+  display: inline-block;
+  position: fixed;
+  width: fit-content;
+  height: 1rem;
+  right: 0;
+}
+
+@media screen and (max-width: 1650px) { /* Smaller */
+
+  .album {
+    margin-bottom: 10rem;
+    width: 100%;
+    overflow: auto;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .song-list-container {
+    display: block;
+    width: 100%;
+    padding: 0;
+    height: auto;
+  }
+
+  .player-bar {
+    animation: 1s ease-out 0s 1 slideInFromBottom;
+    height: 9rem;
+  }
+
+  .player-icon {
+    margin: 0 1rem;
+  }
+
+  .seek-bar {
+    width: 16rem;
+  }
+
+  #album-cover-art {
+    padding: 1rem 0;
+    width: 100%;
+    height: auto;
+  }
+
+  #album-info {
+    padding: 1rem 0;
+    margin: auto;
+  }
+
+  #song-list {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 800px) { /* Mobile */
+    #volume-control {
+      display: none;
+    }
+  }
+}
